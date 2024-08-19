@@ -15,6 +15,9 @@ def start_game():
     while True:
         try:
             guess_number = int(input("Please guess a number from 1 to 10: "))
+            if guess_number > 10 or guess_number < 1:
+                print("Value must  between 1 and 10")
+                continue
         except ValueError:
             print("Please enter a NUMERIC VALUE")
             continue
